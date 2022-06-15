@@ -8,7 +8,7 @@ export function DisplayHomePage(req: express.Request, res: express.Response, nex
 
 export function DisplayAboutPage(req: express.Request, res: express.Response, next: express.NextFunction)
 {
-    res.render('index', { title: 'About Us' , page: 'about', displayName: UserDisplayName(req)});
+    res.render('index', { title: 'About Us' , page: 'about', displayName: UserDisplayName(req));
 }
 
 export function DisplayProjectsPage(req: express.Request, res: express.Response, next: express.NextFunction)

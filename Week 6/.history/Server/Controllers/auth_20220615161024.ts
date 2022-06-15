@@ -7,17 +7,17 @@ import passport from 'passport';
 import User from '../Models/user';
 
 // import the DisplayName Utility method
-import { UserDisplayName } from '../Util';
+import { DisplayName } from '../Util';
 
 // Display Functions
 export function DisplayLoginPage(req: express.Request, res: express.Response, next: express.NextFunction)
 {
-    res.render('index', { title: 'Login', page: 'login', messages: req.flash('loginMessage'), displayName: UserDisplayName(req)});
+    res.render('index', { title: 'Login', page: 'login', messages: req.flash('loginMessage'), displayName: ''});
 }
 
 export function DisplayRegisterPage(req: express.Request, res: express.Response, next: express.NextFunction)
 {
-    res.render('index', { title: 'Register', page: 'register', messages: req.flash('registerMessage'), displayName: UserDisplayName(req)});
+    res.render('index', { title: 'Register', page: 'register', messages: req.flash('registerMessage'), displayName: ''});
 }
 
 // Processing Functions
