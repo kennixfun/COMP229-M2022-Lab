@@ -1,4 +1,3 @@
-import { Console } from 'console';
 import express from 'express';
 
 export function DisplayHomePage(req: express.Request, res: express.Response, next: express.NextFunction)
@@ -31,14 +30,5 @@ import Movie from '../Models/movie';
 
 export function DisplayMovieList(req: express.Request, res: express.Response, next: express.NextFunction)
 {
-    // Accessing the database
-    Movie.find(function(err, moviesCollection)
-    {
-        if(err)
-        {
-            console.error(err);
-            res.end(err);
-        }
-        res.render('index', {title: 'Movie List', page: 'movie-list', movies: moviesCollection});
-    });
+
 }
