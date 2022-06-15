@@ -17,7 +17,7 @@ export function DisplayLoginPage(req: express.Request, res: express.Response, ne
 
 export function DisplayRegisterPage(req: express.Request, res: express.Response, next: express.NextFunction)
 {
-    if (!req.user) // avoid logged-in user to login again
+    if (!req.user)
     {     
         return res.render('index', { title: 'Register', page: 'register', messages: req.flash('registerMessage'), displayName: UserDisplayName(req)});
     }
