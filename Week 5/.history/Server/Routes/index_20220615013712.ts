@@ -24,4 +24,3 @@ router.get('/services', DisplayServicesPage);
 /* GET contact page. */
 router.get('/contact', DisplayContactPage);
 
-export  default router;
